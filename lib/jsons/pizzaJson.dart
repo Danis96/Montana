@@ -1,0 +1,137 @@
+class PizzaJson {
+   final pizzas = [
+      {
+        "name":"Montana",
+        "ingridients":[
+           {
+             "name":"sos"
+           },
+           {
+             "name":"sir"
+           },
+           {
+             "name":"pileća šunka"
+           },
+           {
+             "name":"suho meso"
+           },
+           {
+             "name":"gljive"
+           },
+           {
+             "name":"masline"
+           },
+           {
+             "name":"origano"
+           },
+        ],
+         "size1":"-",
+         "size2":"srednja",
+         "size3":"velika",
+         "size1Cost":"-",
+         "size2Cost":6.0,
+         "size3Cost":13.0,
+      },
+
+
+      {
+         "name":"Margarita",
+        "ingridients":[
+           {
+             "name":"sos"
+           },
+           {
+             "name":"sir"
+           },
+           {
+             "name":"origano"
+           },
+        ],
+         "size1":"kriška",
+         "size2":"srednja",
+         "size3":"velika",
+         "size1Cost":"1.0",
+         "size2Cost":3.0,
+         "size3Cost":10.0,
+      },
+
+
+      {
+         "name":"Capricciosa",
+        "ingridients":[
+           {
+             "name":"sos"
+           },
+           {
+             "name":"sir"
+           },
+           {
+             "name":"pileća šunka"
+           },
+           {
+             "name":"gljive"
+           },
+           {
+             "name":"origano"
+           },
+        ],
+         "size1":"kriška",
+         "size2":"srednja",
+         "size3":"velika",
+         "size1Cost":"1.5",
+         "size2Cost":5.0,
+         "size3Cost":13.0,
+      },
+
+
+      {
+         "name":"Fungi",
+        "ingridients":[
+           {
+             "name":"sos"
+           },
+           {
+             "name":"sir"
+           },
+           {
+             "name":"gljive"
+           },
+           {
+             "name":"origano"
+           },
+        ],
+         "size1":"-",
+         "size2":"srednja",
+         "size3":"velika",
+         "size1Cost":"-",
+         "size2Cost":4.0,
+         "size3Cost":10.0,
+      },
+      {
+         "name":"Vegeterijana",
+        "ingridients":[
+           {
+             "name":"sos"
+           },
+           {
+             "name":"sir"
+           },
+           {
+             "name":"gljive"
+           },
+           {
+             "name":"povrće"
+           },
+           {
+             "name":"origano"
+           },
+        ],
+         "size1":"-",
+         "size2":"srednja",
+         "size3":"velika",
+         "size1Cost":"-",
+         "size2Cost":5.0,
+         "size3Cost":13.0,
+      },
+   ];
+}
