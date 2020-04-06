@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:montana/categories/categories.dart';
 import 'package:montana/constants/colors.dart';
-import 'package:montana/utils/screenUtils.dart';
+import 'package:montana/headline/headline.dart';
+import 'package:flappy_search_bar/flappy_search_bar.dart';
+import 'package:montana/search/search.dart';
 
 void main() => runApp(MyApp());
 
@@ -56,50 +59,63 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
+      body: ListView(
+        physics: ClampingScrollPhysics(),
+        shrinkWrap: true,
         children: <Widget>[
           /// headline widget
           Headline(),
 
           /// categories widget
           Categories(),
+
+          /// search bar
+          SearchWidget(),
         ],
       ),
     );
   }
 }
 
-class Categories extends StatelessWidget {
-  List<String> categories = [
-    'Pizze, Sendviči, Salate, Tortilje, Paste, Maslenice, Uštipci, Pomfrit'
-  ];
+class Meal extends StatefulWidget {
+  
+
+  @override
+  _MealState createState() => _MealState();
+}
+
+class _MealState extends State<Meal> {
+  
+  @override
+  void initState() {
+    // getPizzas();
+    super.initState();
+  }
+   
+   /// PROVUCI PIZZE KROZ MODEL 
+   /// mapirati kroz pizza model podatke 
+   /// prikazati ih kao horizontalni skroll
+
+  // getPizzas() {
+  //   Pizza({});
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ListView.builder(
-        itemCount: categories.length,
-        itemBuilder: (BuildContext context, index) {
-            
-        },
-        ),
+      child: Text('data'),
     );
   }
 }
 
-class Headline extends StatelessWidget {
-  const Headline({Key key}) : super(key: key);
+
+class MealCard extends StatelessWidget {
+  const MealCard({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Constant().responsive(context);
     return Container(
-      padding: EdgeInsets.all(10.0),
-      margin: EdgeInsets.only(left: ScreenUtil.instance.setWidth(26.0)),
-      child: Text('Ostaju \nsamo mrvice',
-          style: TextStyle(
-              fontSize: ScreenUtil.instance.setSp(42.0),
-              color: MyColors().main)),
+      child: Text('data'),
     );
   }
 }

@@ -5,4 +5,5 @@ class MyColors {
   Color black = Color.fromRGBO(0, 0, 0, 1);
   Color error = Colors.red;
   Color main = Color.fromRGBO(252, 190, 73, 1.0);
+  Color mainSecond = Color.fromRGBO(252, 202, 96, 1.0);
 }
