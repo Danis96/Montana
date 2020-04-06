@@ -56,7 +56,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           /// headline widget
           Headline(),
@@ -71,18 +71,57 @@ class HomePage extends StatelessWidget {
 
 class Categories extends StatelessWidget {
   List<String> categories = [
-    'Pizze, Sendviči, Salate, Tortilje, Paste, Maslenice, Uštipci, Pomfrit'
+    'Pizze',
+    'Sendviči',
+    'Salate',
+    'Tortilje',
+    'Paste',
+    'Maslenice',
+    'Uštipci',
+    'Pomfrit'
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ListView.builder(
-        itemCount: categories.length,
-        itemBuilder: (BuildContext context, index) {
-            
-        },
-        ),
+      margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20.0)),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: SizedBox(
+              height: 50.0,
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: categories.length,
+                itemBuilder: (BuildContext context, index) {
+                  return SingleCategory(categories[index].toString());
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SingleCategory extends StatelessWidget {
+  final String category;
+  SingleCategory(this.category);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(left: ScreenUtil.instance.setWidth(14.0)),
+      height: 70.0,
+      width: 110.0,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+        borderRadius: new BorderRadius.circular(33.5),
+        border: Border.all(color: MyColors().mainSecond),
+      ),
+      child: Center(child: Container(child: Text(category))),
     );
   }
 }
